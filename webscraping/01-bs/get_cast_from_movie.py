@@ -13,10 +13,9 @@
             or
         easy_install requests
 
-    This will collect and print
-    {Movie Title}   {Actor Name}    {Character Name}
-    for the cast in each of the top 10 movies in the IMDb Top 250 list
-    (http://www.imdb.com/chart/top?ref_=nv_ch_250_4)
+    This will collect and print  
+    {Actor Name}    {Character Name}
+    from the cast overview in a given IMDb.com movie page
 @author: Jongbin Jung (jongbin at stanford edu)
 """
 from bs4 import BeautifulSoup

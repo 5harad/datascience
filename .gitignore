@@ -101,3 +101,4 @@ pip-delete-this-directory.txt
 *.nav
 *.snm
 *.key
+.idea
