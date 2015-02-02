@@ -19,7 +19,6 @@
     (http://www.imdb.com/chart/top?ref_=nv_ch_250_4)
 @author: Jongbin Jung (jongbin at stanford edu)
 """
-import codecs
 from time import sleep
 from bs4 import BeautifulSoup, SoupStrainer
 import requests
@@ -46,7 +45,8 @@ def get_cast_from_link(movie_link):
     """
     movie_page = requests.get(movie_link)
 
-    # Strain the cast_list table from the movie_page
+    # Use SoupStrainer to strain the cast_list table from the movie_page
+    # This can save some time in bigger scraping projects
     cast_strainer = SoupStrainer('table', class_='cast_list')
     movie_soup = BeautifulSoup(movie_page.content, parse_only=cast_strainer)
 
@@ -95,7 +95,3 @@ for movie in movie_list:
 
     # remember to be nice, and sleep a while between requests!
     sleep(3)
-
-    # with codecs.open('top_movies_actors.tsv', 'a',
-    # encoding='utf-8') as fid:
-    #     print>> fid, '\t'.join([movie_title, actor, character])

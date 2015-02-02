@@ -100,3 +100,4 @@ pip-delete-this-directory.txt
 *.vrb
 *.nav
 *.snm
+*.key
