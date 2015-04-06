@@ -127,7 +127,7 @@ head(mtcars,n=10)
 # Need to reshape the data frame
 smiths
 # Use melt to convert data frame into long-format
-smiths_long <- melt(smiths, id.vars=c("subject"))
+smiths_long <- melt(smiths, id.vars=c("subject","time","age"))
 smiths_long
 # To convert back to wide format, use dcast
 smiths_wide <- dcast(smiths_long, subject ~  variable)
