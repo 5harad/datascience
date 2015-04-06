@@ -112,6 +112,14 @@ p <- p +  geom_vline(xintercept=179.5,linetype=2)
 p <- p + geom_point(x=179.5, y=-16.5, shape=4, color="darkred", size=3)
 p
 
+# challenge:
+# Look into the dataset mtcars
+head(mtcars,n=10)
+# Challenge 1:
+# Plot scatterplot of horsepower vs. mpg, and show number of cylenders as color
+# Challenge 2:
+# In the previous scatter plot, distinguish points with mpg < 25 & hp > 200  
+
 
 # reshape2 library: melt and cast
 # ggplot uses every line of the data frame as a data point
